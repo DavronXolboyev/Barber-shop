@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+
 }
 
 android {
@@ -49,7 +51,7 @@ dependencies {
     implementation 'javax.inject:javax.inject:1'
 
     //Dagger 2
-    def dagger_version = "2.5.0"
+    def dagger_version = "2.45"
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
 

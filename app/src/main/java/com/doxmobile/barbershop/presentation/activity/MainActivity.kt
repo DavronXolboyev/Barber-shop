@@ -1,4 +1,4 @@
-package com.doxmobile.barbershop
+package com.doxmobile.barbershop.presentation.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
