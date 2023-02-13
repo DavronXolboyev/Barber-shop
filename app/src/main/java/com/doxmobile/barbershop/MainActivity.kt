@@ -1,7 +1,8 @@
-package com.example.barbershop
+package com.doxmobile.barbershop
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.barbershop.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
