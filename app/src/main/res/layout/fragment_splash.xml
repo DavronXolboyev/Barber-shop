@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_700"
-    tools:context="com.doxmobile.barbershop.presentation.fragment.SplashFragment">
+    tools:context="com.doxmobile.barbershop.presentation.fragment.splash.SplashFragment">
 
     <ImageView
         android:layout_width="wrap_content"

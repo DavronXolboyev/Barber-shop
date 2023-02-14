@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.barbershop'
+    namespace 'com.doxmobile.barbershop'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.barbershop"
+        applicationId "com.doxmobile.barbershop"
         minSdk 22
         targetSdk 33
         versionCode 1
@@ -49,6 +49,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'javax.inject:javax.inject:1'
+
+    // Modules
+    implementation project(path : ':data')
+    implementation project(path : ':domain')
 
     //Dagger 2
     def dagger_version = "2.45"
