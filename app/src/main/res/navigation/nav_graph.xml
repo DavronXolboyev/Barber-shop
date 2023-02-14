@@ -7,18 +7,35 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.doxmobile.barbershop.presentation.fragment.SplashFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_splashFragment_to_userRoleFragment"
-            app:destination="@id/userRoleFragment"
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/userRoleFragment"
-        android:name="com.doxmobile.barbershop.presentation.fragment.UserRoleFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.role.UserRoleFragment"
         android:label="fragment_user_role"
-        tools:layout="@layout/fragment_user_role" />
+        tools:layout="@layout/fragment_user_role" >
+        <action
+            android:id="@+id/action_userRoleFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/userRoleFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_userRoleFragment"
+            app:destination="@id/userRoleFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

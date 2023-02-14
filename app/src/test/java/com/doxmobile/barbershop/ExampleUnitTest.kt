@@ -1,4 +1,4 @@
-package com.example.barbershop
+package com.doxmobile.barbershop
 
 import org.junit.Test
 
