@@ -9,8 +9,8 @@ import com.doxmobile.barbershop.R
 import com.doxmobile.barbershop.app.App
 import com.doxmobile.barbershop.databinding.FragmentUserRoleBinding
 import com.doxmobile.barbershop.presentation.fragment.base.BaseFragment
-import com.doxmobile.barbershop.util.Role
 import com.doxmobile.barbershop.util.applyBinding
+import com.doxmobile.domain.model.Role
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch

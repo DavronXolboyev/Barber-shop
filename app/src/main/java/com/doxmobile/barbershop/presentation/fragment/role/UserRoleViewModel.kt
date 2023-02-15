@@ -2,8 +2,9 @@ package com.doxmobile.barbershop.presentation.fragment.role
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.doxmobile.barbershop.util.Role
+import com.doxmobile.domain.local.SetRoleUseCase
 import com.doxmobile.domain.local.UpdateHasTheUserChosenARoleUseCase
+import com.doxmobile.domain.model.Role
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
@@ -11,7 +12,8 @@ import kotlinx.coroutines.launch
  * Created by Davron Xolboyev on 14.02.2023
  */
 class UserRoleViewModel(
-    private val updateHasTheUserChosenARoleUseCase: UpdateHasTheUserChosenARoleUseCase
+    private val updateHasTheUserChosenARoleUseCase: UpdateHasTheUserChosenARoleUseCase,
+    private val setRoleUseCase: SetRoleUseCase
 ) : ViewModel() {
     private val userRole = MutableStateFlow("")
     val isChosenRole = combine(userRole) { role -> role[0].isNotEmpty() }.stateIn(
@@ -25,6 +27,7 @@ class UserRoleViewModel(
         when (action) {
             Action.NavigateToHome -> {
                 // TODO: save role
+                setRoleUseCase.setRole(userRole.value)
                 updateHasTheUserChosenARoleUseCase.updateUserRole()
                 _canNavigateToHome.emit(true)
             }

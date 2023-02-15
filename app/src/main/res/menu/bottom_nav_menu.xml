@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/barberFavShopsListFragment"
+        android:icon="@drawable/ic_bookmark"
+        android:title="@string/favourite" />
+    <item
+        android:id="@+id/barberShopsListFragment"
+        android:icon="@drawable/ic_list"
+        android:title="@string/barber_shops" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_person"
+        android:title="@string/profile" />
+
+</menu>

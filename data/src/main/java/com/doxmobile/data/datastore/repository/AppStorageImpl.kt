@@ -2,6 +2,7 @@ package com.doxmobile.data.datastore.repository
 
 import com.doxmobile.data.datastore.AppStorage
 import com.doxmobile.domain.local.AppStorageRepository
+import com.doxmobile.domain.model.Role
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
@@ -15,5 +16,13 @@ class AppStorageImpl(private val appStorage: AppStorage) : AppStorageRepository 
 
     override suspend fun updateHasTheUserChosenARole() {
         appStorage.updateHasTheUserChosenARole()
+    }
+
+    override fun getUserRole(): Flow<String> {
+        return appStorage.roleFlow
+    }
+
+    override suspend fun setUserRole(roleName: String) {
+        appStorage.setRole(roleName = roleName)
     }
 }
