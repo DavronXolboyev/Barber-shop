@@ -22,6 +22,7 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 class AppStorage(private val context: Context) {
 
     private val hasTheUserChosenARole = booleanPreferencesKey(name = KEY_HAS_CHOSEN_ROLE)
+    private val hasBarberShop = booleanPreferencesKey(name = KEY_HAS_BARBER_SHOP)
     private val role = stringPreferencesKey(name = KEY_ROLE)
 
 
@@ -38,16 +39,17 @@ class AppStorage(private val context: Context) {
         }
     }
 
-    suspend fun updateHasTheUserChosenARole() {
+    suspend fun updateHasTheUserChosenARole(isChosen : Boolean) {
         Log.i(TAG, "updateHasTheUserChosenARole: worked")
         context.dataStore.edit { settings ->
-            settings[hasTheUserChosenARole] = true
+            settings[hasTheUserChosenARole] = isChosen
         }
     }
 
     companion object {
         const val KEY_HAS_CHOSEN_ROLE = "has_role"
         const val KEY_ROLE = "role"
+        const val KEY_HAS_BARBER_SHOP = "has_barber_shop"
         const val TAG = "AppStorage"
     }
 }
