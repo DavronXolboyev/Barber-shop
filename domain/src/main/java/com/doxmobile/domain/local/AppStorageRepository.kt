@@ -8,4 +8,6 @@ import kotlinx.coroutines.flow.Flow
 interface AppStorageRepository {
     fun hasTheUserChosenARole(): Flow<Boolean>
     suspend fun updateHasTheUserChosenARole()
+    fun getUserRole() : Flow<String>
+    suspend fun setUserRole(roleName : String)
 }

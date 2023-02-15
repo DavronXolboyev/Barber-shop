@@ -1,9 +1,6 @@
 package com.doxmobile.barbershop.di.module
 
-import com.doxmobile.domain.local.AppStorageRepository
-import com.doxmobile.domain.local.AppStorageUseCase
-import com.doxmobile.domain.local.GetHasTheUserChosenARoleUseCase
-import com.doxmobile.domain.local.UpdateHasTheUserChosenARoleUseCase
+import com.doxmobile.domain.local.*
 import dagger.Module
 import dagger.Provides
 
@@ -28,6 +25,18 @@ class DomainModule {
     @Provides
     fun provideUpdateHasTheUserChosenARoleUseCase(appStorageRepository: AppStorageRepository): UpdateHasTheUserChosenARoleUseCase =
         UpdateHasTheUserChosenARoleUseCase(
+            appStorageRepository = appStorageRepository
+        )
+
+    @Provides
+    fun provideGetUserRoleUseCase(appStorageRepository: AppStorageRepository): GetUserRoleUseCase =
+        GetUserRoleUseCase(
+            appStorageRepository = appStorageRepository
+        )
+
+    @Provides
+    fun provideSetRoleUseCase(appStorageRepository: AppStorageRepository): SetRoleUseCase =
+        SetRoleUseCase(
             appStorageRepository = appStorageRepository
         )
 

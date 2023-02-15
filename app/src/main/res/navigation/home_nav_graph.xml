@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/barberShopsListFragment">
+
+    <fragment
+        android:id="@+id/barberShopsListFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.barber_shops_list.BarberShopsListFragment"
+        android:label="fragment_barber_shops_list"
+        tools:layout="@layout/fragment_barber_shops_list" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/barberFavShopsListFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.barber_fav_shops_list.BarberFavShopsListFragment"
+        android:label="fragment_barber_fav_shops_list"
+        tools:layout="@layout/fragment_barber_fav_shops_list" />
+</navigation>
