@@ -4,24 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragment.home.barber_shops_list.BarberShopsListFragment">
+    tools:context=".presentation.fragment.home.fav_barbershops_list.FavBarbershopsListFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/shops_toolbar"
+        android:id="@+id/fav_shops_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:background="@color/purple_500"
-        app:title="@string/barber_shops"
+        app:title="@string/favourite"
         app:titleTextColor="@color/white" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/shops_rv"
+        android:id="@+id/fav_shops_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/shops_toolbar"
+        android:layout_below="@id/fav_shops_toolbar"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true" />

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/barberShopsListFragment"
-        android:name="com.doxmobile.barbershop.presentation.fragment.home.barber_shops_list.BarberShopsListFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.barbershops_list.BarbershopsListFragment"
         android:label="fragment_barber_shops_list"
-        tools:layout="@layout/fragment_barber_shops_list" />
+        tools:layout="@layout/fragment_barbershops_list" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.ProfileFragment"
@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/barberFavShopsListFragment"
-        android:name="com.doxmobile.barbershop.presentation.fragment.home.barber_fav_shops_list.BarberFavShopsListFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.fav_barbershops_list.FavBarbershopsListFragment"
         android:label="fragment_barber_fav_shops_list"
-        tools:layout="@layout/fragment_barber_fav_shops_list" />
+        tools:layout="@layout/fragment_fav_barbershops_list" />
 </navigation>
