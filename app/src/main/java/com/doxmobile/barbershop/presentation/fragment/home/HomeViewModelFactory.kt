@@ -4,11 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.doxmobile.domain.local.GetHasTheUserChosenARoleUseCase
 import com.doxmobile.domain.local.GetUserRoleUseCase
+import javax.inject.Inject
 
 /**
  * Created by Davron Xolboyev on 14.02.2023
  */
-class HomeViewModelFactory(
+class HomeViewModelFactory @Inject constructor(
     private val getHasTheUserChosenARoleUseCase: GetHasTheUserChosenARoleUseCase,
     private val getUserRoleUseCase: GetUserRoleUseCase
 ) : ViewModelProvider.Factory {
