@@ -14,8 +14,8 @@ class AppStorageImpl(private val appStorage: AppStorage) : AppStorageRepository 
         return appStorage.hasTheUserChosenARoleFlow
     }
 
-    override suspend fun updateHasTheUserChosenARole() {
-        appStorage.updateHasTheUserChosenARole()
+    override suspend fun updateHasTheUserChosenARole(isChosen : Boolean) {
+        appStorage.updateHasTheUserChosenARole(isChosen = isChosen)
     }
 
     override fun getUserRole(): Flow<String> {

@@ -28,7 +28,7 @@ class UserRoleViewModel(
             Action.NavigateToHome -> {
                 // TODO: save role
                 setRoleUseCase.setRole(userRole.value)
-                updateHasTheUserChosenARoleUseCase.updateUserRole()
+                updateHasTheUserChosenARoleUseCase.updateUserRole(isChosen = true)
                 _canNavigateToHome.emit(true)
             }
             is Action.SetUserRole -> {
