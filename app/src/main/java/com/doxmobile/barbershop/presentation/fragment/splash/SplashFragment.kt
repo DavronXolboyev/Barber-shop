@@ -6,7 +6,9 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.doxmobile.barbershop.databinding.FragmentSplashBinding
 import com.doxmobile.barbershop.presentation.fragment.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding::inflate) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -1,5 +1,6 @@
-package com.doxmobile.domain.local
+package com.doxmobile.data.datastore.usecase
 
+import com.doxmobile.data.datastore.repository.AppStorageRepository
 import javax.inject.Inject
 
 /**

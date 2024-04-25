@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
  */
 typealias Inflater <VB> = (LayoutInflater, ViewGroup?, Boolean) -> VB
 
-open class BaseFragment<VB : ViewBinding>(private val inflate: Inflater<VB>) : Fragment() {
+abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflater<VB>) : Fragment() {
     private var _binding: VB? = null
     val binding get() =  _binding!!
 
@@ -28,6 +28,13 @@ open class BaseFragment<VB : ViewBinding>(private val inflate: Inflater<VB>) : F
     ): View? {
         _binding = inflate.invoke(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initData()
+        observeVM()
+        initListeners()
     }
 
     override fun onDestroyView() {
@@ -43,4 +50,8 @@ open class BaseFragment<VB : ViewBinding>(private val inflate: Inflater<VB>) : F
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(state, action)
         }
     }
+
+    open fun initData(){}
+    open fun initListeners(){}
+    open fun observeVM(){}
 }

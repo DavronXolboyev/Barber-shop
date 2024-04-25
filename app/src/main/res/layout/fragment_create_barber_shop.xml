@@ -1,30 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.home.profile.open_a_barbershop.create.CreateBarberShopFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/purple_500"
+        app:navigationIcon="@drawable/keyboard_backspace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/sartaroshxona_yaratish"
+        app:titleTextColor="@color/white" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_bsh_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"
-        android:hint="Sartaroshxona nomi"
+        android:hint="@string/sartaroshxona_nomi"
+        android:padding="0dp"
         app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/hint_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_bsh_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
             android:inputType="text"
             android:maxLength="20"
             android:maxLines="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Panterra" />
+            android:padding="12dp"
+            tools:text="Pantera" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_bsh_unique_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/noyob_nom"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintEnd_toEndOf="@+id/til_bsh_name"
+        app:layout_constraintStart_toStartOf="@+id/til_bsh_name"
+        app:layout_constraintTop_toBottomOf="@id/til_bsh_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_bsh_unique_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="12dp"
+            tools:text="Pantera" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_bsh_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/parol"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintEnd_toEndOf="@+id/til_bsh_name"
+        app:layout_constraintStart_toStartOf="@+id/til_bsh_name"
+        app:layout_constraintTop_toBottomOf="@id/til_bsh_unique_name"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_bsh_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="10dp"
+            tools:text="Pantera" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_bsh_password2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/parolni_tasdiqlang"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintEnd_toEndOf="@+id/til_bsh_name"
+        app:layout_constraintStart_toStartOf="@+id/til_bsh_name"
+        app:layout_constraintTop_toBottomOf="@id/til_bsh_password"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_bsh_password2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="10dp"
+            tools:text="Pantera" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_work_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ish_vaqti"
+        android:textColor="@color/hint_color"
+        app:layout_constraintStart_toStartOf="@+id/til_bsh_password2"
+        app:layout_constraintTop_toBottomOf="@+id/til_bsh_password2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textColor="@color/black"
+        android:id="@+id/et_from_time"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_s12"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp"
+        app:layout_constraintStart_toStartOf="@id/tv_work_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_time"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/dan"
+        android:textColor="@color/hint_color"
+        app:layout_constraintBottom_toBottomOf="@id/et_from_time"
+        app:layout_constraintStart_toEndOf="@id/et_from_time"
+        app:layout_constraintTop_toTopOf="@id/et_from_time" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textColor="@color/black"
+        android:id="@+id/et_to_time"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/rounded_s12"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/et_from_time"
+        app:layout_constraintStart_toEndOf="@id/tv_from"
+        app:layout_constraintTop_toTopOf="@id/et_from_time"
+         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/gacha"
+        android:textColor="@color/hint_color"
+        app:layout_constraintBottom_toBottomOf="@id/et_to_time"
+        app:layout_constraintStart_toEndOf="@id/et_to_time"
+        app:layout_constraintTop_toTopOf="@id/et_to_time" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_for_whom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/kimlar_uchun"
+        android:textColor="@color/hint_color"
+        app:layout_constraintStart_toStartOf="@+id/til_bsh_password2"
+        app:layout_constraintTop_toBottomOf="@+id/et_from_time" />
+
+    <RadioGroup
+        android:id="@+id/rg_for_whom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tv_for_whom"
+        app:layout_constraintTop_toBottomOf="@id/tv_for_whom">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_erkaklar"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:checked="true"
+            android:maxHeight="0dp"
+            android:text="@string/erkaklar" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_ayollar"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:maxHeight="0dp"
+            android:text="@string/ayollar" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/keyingisi"
+        android:textColor="@color/button_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/til_bsh_name"
+        app:layout_constraintStart_toStartOf="@id/til_bsh_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

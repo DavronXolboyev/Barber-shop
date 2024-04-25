@@ -1,4 +1,4 @@
-package com.doxmobile.domain.local
+package com.doxmobile.data.datastore.repository
 
 import kotlinx.coroutines.flow.Flow
 
