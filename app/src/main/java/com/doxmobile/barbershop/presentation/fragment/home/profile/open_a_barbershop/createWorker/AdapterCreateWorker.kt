@@ -1,4 +1,4 @@
-package com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.create_worker
+package com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.createWorker
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

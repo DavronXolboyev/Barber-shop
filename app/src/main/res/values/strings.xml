@@ -30,4 +30,7 @@
     <string name="telefon_raqami">Telefon raqami</string>
     <string name="ishchi_qo_shish">Ishchi qo‘shish</string>
     <string name="sartaroshlar">Sartaroshlar</string>
+    <string name="soch_turmak_nomi">Soch turmak nomi</string>
+    <string name="narxi">Narxi (so‘m)</string>
+    <string name="yangi_soch_turmak">Yangi soch turmak</string>
 </resources>

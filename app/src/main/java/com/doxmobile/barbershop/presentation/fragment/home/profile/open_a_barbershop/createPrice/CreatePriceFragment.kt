@@ -1,28 +1,28 @@
-package com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.create_worker
+package com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.createPrice
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
-import com.doxmobile.barbershop.databinding.FragmentWorkersBinding
+import com.doxmobile.barbershop.databinding.FragmentCreatePriceBinding
 import com.doxmobile.barbershop.presentation.fragment.base.BaseFragment
 import com.doxmobile.barbershop.util.Navigate
 import com.doxmobile.barbershop.util.applyBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class WorkersFragment : BaseFragment<FragmentWorkersBinding>(FragmentWorkersBinding::inflate) {
+class CreatePriceFragment :
+    BaseFragment<FragmentCreatePriceBinding>(FragmentCreatePriceBinding::inflate) {
 
-    private val viewModel: WorkersViewModel by viewModels()
-    private val adapterCreateWorker: AdapterCreateWorker by lazy {
-        AdapterCreateWorker { oldList ->
-            viewModel.addWorker(oldList)
+    private val viewModel: CreatePriceViewModel by viewModels()
+    private val adapterCreatePrices: AdapterCreatePrices by lazy {
+        AdapterCreatePrices {
+            viewModel.addPrice(it)
         }
     }
 
     override fun initData() {
-        binding.rvWorkers.adapter = adapterCreateWorker
+        binding.rvWorkers.adapter = adapterCreatePrices
     }
 
     override fun initListeners() = binding.applyBinding {
@@ -32,15 +32,15 @@ class WorkersFragment : BaseFragment<FragmentWorkersBinding>(FragmentWorkersBind
         }
 
         btnNext.setOnClickListener {
-            viewModel.createWorkers(adapterCreateWorker.workers)
+            viewModel.createWorkers(adapterCreatePrices.priceList)
         }
     }
 
     override fun observeVM() {
         repeatOn(Lifecycle.State.STARTED) {
             launch {
-                viewModel.workers.collect { newList ->
-                    adapterCreateWorker.updateList(newList)
+                viewModel.prices.collect { newList ->
+                    adapterCreatePrices.updateList(newList)
                 }
             }
             launch {

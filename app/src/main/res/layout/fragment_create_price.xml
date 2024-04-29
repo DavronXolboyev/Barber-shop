@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".presentation.fragment.home.profile.open_a_barbershop.createWorker.WorkersFragment">
+    tools:context="com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.createPrice.CreatePriceFragment">
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -15,10 +16,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:background="@color/purple_500"
-        app:navigationIcon="@drawable/keyboard_backspace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/keyboard_backspace"
         app:title="@string/sartaroshlar"
         app:titleTextColor="@color/white" />
 
@@ -29,7 +30,7 @@
         android:layout_marginVertical="8dp"
         android:layout_weight="1"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_create_barber" />
+        tools:listitem="@layout/item_create_price" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_next"
@@ -40,5 +41,4 @@
         android:background="@drawable/bg_button"
         android:text="@string/keyingisi"
         android:textColor="@color/button_text_color" />
-
 </androidx.appcompat.widget.LinearLayoutCompat>

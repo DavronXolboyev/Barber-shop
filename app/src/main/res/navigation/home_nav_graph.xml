@@ -35,7 +35,16 @@
     </fragment>
     <fragment
         android:id="@+id/workersFragment"
-        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.create_worker.WorkersFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.createWorker.WorkersFragment"
         android:label="WorkersFragment"
-        tools:layout="@layout/fragment_workers" />
+        tools:layout="@layout/fragment_workers" >
+        <action
+            android:id="@+id/action_workersFragment_to_createPriceFragment"
+            app:destination="@id/createPriceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPriceFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.createPrice.CreatePriceFragment"
+        android:label="fragment_create_price"
+        tools:layout="@layout/fragment_create_price" />
 </navigation>

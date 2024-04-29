@@ -1,4 +1,4 @@
-package com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.create_worker
+package com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.createWorker
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -30,8 +30,9 @@ class WorkersViewModel @Inject constructor() : ViewModel() {
         _navigate.emit(Navigate.BACK)
     }
 
-    fun createWorkers(workers: List<CreateWorker>) {
+    fun createWorkers(workers: List<CreateWorker>) = viewModelScope.launch{
         // TODO: Ishchilarni tekshirib, hammasi to‘g‘ri bo‘lsa, serverga jo‘natilsin
+        _navigate.emit(Navigate.NEXT)
     }
 
 }
