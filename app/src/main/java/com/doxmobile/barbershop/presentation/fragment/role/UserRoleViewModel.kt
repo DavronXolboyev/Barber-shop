@@ -2,11 +2,15 @@ package com.doxmobile.barbershop.presentation.fragment.role
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.doxmobile.data.datastore.usecase.SetRoleUseCase
-import com.doxmobile.data.datastore.usecase.UpdateHasTheUserChosenARoleUseCase
-import com.doxmobile.domain.model.Role
+import com.doxmobile.data.model.Role
+import com.doxmobile.domain.SetRoleUseCase
+import com.doxmobile.domain.UpdateHasTheUserChosenARoleUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -35,6 +39,7 @@ class UserRoleViewModel @Inject constructor(
                 updateHasTheUserChosenARoleUseCase.updateUserRole(isChosen = true)
                 _canNavigateToHome.emit(true)
             }
+
             is Action.SetUserRole -> {
                 userRole.emit(action.role.name)
             }

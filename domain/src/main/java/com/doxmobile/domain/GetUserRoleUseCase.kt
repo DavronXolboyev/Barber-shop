@@ -1,8 +1,8 @@
-package com.doxmobile.data.datastore.usecase
+package com.doxmobile.domain
 
-import com.doxmobile.data.datastore.repository.AppStorageRepository
-import com.doxmobile.domain.model.Role
-import com.doxmobile.domain.model.toRole
+import com.doxmobile.data.model.Role
+import com.doxmobile.data.model.toRole
+import com.doxmobile.data.repository.AppStorageRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

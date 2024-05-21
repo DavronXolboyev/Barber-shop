@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "231369275759",
+    "project_id": "barbershop-2592e",
+    "storage_bucket": "barbershop-2592e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231369275759:android:678b5d9b52c596cf33109a",
+        "android_client_info": {
+          "package_name": "com.doxmobile.barbershop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBntEfu-uTAbT6Ob7O3NYi7rxWgH5Sb9a4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

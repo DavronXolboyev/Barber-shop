@@ -1,4 +1,4 @@
-package com.doxmobile.domain.model
+package com.doxmobile.data.model
 
 /**
  * Created by Davron Xolboyev on 13.02.2023

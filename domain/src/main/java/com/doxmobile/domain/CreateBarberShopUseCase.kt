@@ -1,7 +1,8 @@
-package com.doxmobile.domain.useacase
+package com.doxmobile.domain
 
-import com.doxmobile.domain.model.create.CreateBarberShopReq
-import com.doxmobile.domain.repository.CreateBarberShopRepository
+
+import com.doxmobile.data.model.create.CreateBarberShopReq
+import com.doxmobile.data.repository.CreateBarberShopRepository
 import javax.inject.Inject
 
 class CreateBarberShopUseCase @Inject constructor(createBarberShopRepository: CreateBarberShopRepository) {

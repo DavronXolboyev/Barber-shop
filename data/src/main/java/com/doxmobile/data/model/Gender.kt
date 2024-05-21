@@ -1,4 +1,4 @@
-package com.doxmobile.domain.model
+package com.doxmobile.data.model
 
 
 enum class Gender {

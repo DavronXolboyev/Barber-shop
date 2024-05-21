@@ -1,7 +1,7 @@
 package com.doxmobile.barbershop.util
 
 import com.doxmobile.barbershop.R
-import com.doxmobile.domain.model.Gender
+import com.doxmobile.data.model.Gender
 
 /**
  * Created by Davron Xolboyev on 14.02.2023

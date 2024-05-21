@@ -1,4 +1,4 @@
-package com.doxmobile.data.datastore
+package com.doxmobile.data
 
 import android.content.Context
 import android.util.Log

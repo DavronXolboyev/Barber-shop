@@ -6,22 +6,18 @@ import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.doxmobile.barbershop.R
-import com.doxmobile.barbershop.app.App
 import com.doxmobile.barbershop.databinding.FragmentHomeBinding
 import com.doxmobile.barbershop.presentation.fragment.base.BaseFragment
 import com.doxmobile.barbershop.util.applyBinding
-import com.doxmobile.domain.model.Role
+import com.doxmobile.data.model.Role
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
@@ -34,16 +30,22 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         initView()
     }
 
-    private fun initView() = binding.applyBinding{
-        val navHostFragment = childFragmentManager.findFragmentById(R.id.home_fragment_container) as NavHostFragment
+    private fun initView() = binding.applyBinding {
+        val navHostFragment =
+            childFragmentManager.findFragmentById(R.id.home_fragment_container) as NavHostFragment
         homeBottomNavigation.setupWithNavController(navController = navHostFragment.navController)
-        navHostFragment.navController.addOnDestinationChangedListener(object : NavController.OnDestinationChangedListener{
+        navHostFragment.navController.addOnDestinationChangedListener(object :
+            NavController.OnDestinationChangedListener {
             override fun onDestinationChanged(
                 controller: NavController,
                 destination: NavDestination,
                 arguments: Bundle?
             ) {
-                val isVisible = destination.id in listOf(R.id.profileFragment,R.id.barberFavShopsListFragment,R.id.barberShopsListFragment)
+                val isVisible = destination.id in listOf(
+                    R.id.profileFragment,
+                    R.id.barberFavShopsListFragment,
+                    R.id.barberShopsListFragment
+                )
                 homeBottomNavigation.isVisible = isVisible
             }
         })

@@ -1,9 +1,9 @@
 package com.doxmobile.barbershop.di
 
 import android.content.Context
-import com.doxmobile.data.datastore.AppStorage
-import com.doxmobile.data.datastore.repository.AppStorageRepository
-import com.doxmobile.data.datastore.repositoryImpl.AppStorageImpl
+import com.doxmobile.data.AppStorage
+import com.doxmobile.data.repository.AppStorageRepository
+import com.doxmobile.data.repositoryImpl.AppStorageImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

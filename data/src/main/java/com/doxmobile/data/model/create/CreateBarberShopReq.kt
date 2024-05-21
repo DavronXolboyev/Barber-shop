@@ -1,6 +1,6 @@
-package com.doxmobile.domain.model.create
+package com.doxmobile.data.model.create
 
-import com.doxmobile.domain.model.Gender
+import com.doxmobile.data.model.Gender
 
 data class CreateBarberShopReq(
     val name: String? = null,

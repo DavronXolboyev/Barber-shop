@@ -3,7 +3,7 @@ package com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbe
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.doxmobile.barbershop.util.Navigate
-import com.doxmobile.domain.model.create.CreateBarberShopReq
+import com.doxmobile.data.model.create.CreateBarberShopReq
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

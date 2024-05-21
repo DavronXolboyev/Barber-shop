@@ -1,8 +1,8 @@
 package com.doxmobile.barbershop.presentation.fragment.home
 
 import androidx.lifecycle.ViewModel
-import com.doxmobile.data.datastore.usecase.GetHasTheUserChosenARoleUseCase
-import com.doxmobile.data.datastore.usecase.GetUserRoleUseCase
+import com.doxmobile.domain.GetHasTheUserChosenARoleUseCase
+import com.doxmobile.domain.GetUserRoleUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

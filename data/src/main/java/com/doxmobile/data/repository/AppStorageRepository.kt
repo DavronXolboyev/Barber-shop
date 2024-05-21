@@ -1,4 +1,4 @@
-package com.doxmobile.data.datastore.repository
+package com.doxmobile.data.repository
 
 import kotlinx.coroutines.flow.Flow
 

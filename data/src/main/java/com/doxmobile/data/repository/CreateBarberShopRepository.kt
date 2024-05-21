@@ -1,4 +1,4 @@
-package com.doxmobile.domain.repository
+package com.doxmobile.data.repository
 
 interface CreateBarberShopRepository {
 

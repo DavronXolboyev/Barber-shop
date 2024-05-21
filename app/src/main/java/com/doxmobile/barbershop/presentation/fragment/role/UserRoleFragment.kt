@@ -9,7 +9,7 @@ import com.doxmobile.barbershop.R
 import com.doxmobile.barbershop.databinding.FragmentUserRoleBinding
 import com.doxmobile.barbershop.presentation.fragment.base.BaseFragment
 import com.doxmobile.barbershop.util.applyBinding
-import com.doxmobile.domain.model.Role
+import com.doxmobile.data.model.Role
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
@@ -54,7 +54,7 @@ class UserRoleFragment : BaseFragment<FragmentUserRoleBinding>(FragmentUserRoleB
         }
     }
 
-     override fun initListeners() = binding.applyBinding {
+    override fun initListeners() = binding.applyBinding {
         continueTv.setOnClickListener {
             viewModel.setAction(Action.NavigateToHome)
         }

@@ -48,7 +48,7 @@ class CreatePriceFragment :
                     when (navigate) {
                         Navigate.BACK -> findNavController().popBackStack()
                         Navigate.NEXT -> {
-                            // TODO: navigate next
+                            findNavController().navigate(CreatePriceFragmentDirections.actionCreatePriceFragmentToAddPhotoFragment())
                         }
                     }
                 }

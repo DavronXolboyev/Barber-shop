@@ -30,8 +30,9 @@ class CreatePriceViewModel @Inject constructor() : ViewModel() {
         _navigate.emit(Navigate.BACK)
     }
 
-    fun createWorkers(prices: List<CreatePrice>) {
+    fun createWorkers(prices: List<CreatePrice>) = viewModelScope.launch {
         // TODO: Ishchilarni tekshirib, hammasi to‘g‘ri bo‘lsa, serverga jo‘natilsin
+        _navigate.emit(Navigate.NEXT)
     }
 
 }

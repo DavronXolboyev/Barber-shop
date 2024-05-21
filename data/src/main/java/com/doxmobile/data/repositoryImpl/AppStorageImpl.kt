@@ -1,7 +1,7 @@
-package com.doxmobile.data.datastore.repositoryImpl
+package com.doxmobile.data.repositoryImpl
 
-import com.doxmobile.data.datastore.AppStorage
-import com.doxmobile.data.datastore.repository.AppStorageRepository
+import com.doxmobile.data.AppStorage
+import com.doxmobile.data.repository.AppStorageRepository
 import kotlinx.coroutines.flow.Flow
 
 /**
