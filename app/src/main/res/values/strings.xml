@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">Barber shop</string>
+    <string name="hairdresser">Hairdresser</string>
+    <string name="customer">Customer</string>
+    <string name="continue_text">Continue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favourite">Favourite</string>
+    <string name="barber_shops">Barber shops</string>
+    <string name="profile">Profile</string>
+    <string name="favourites">Favourites</string>
+    <string name="open_a_barbershop">Sartaroshxona ochish</string>
+    <string name="sartaroshxona_nomi">Sartaroshxona nomi</string>
+    <string name="noyob_nom">Noyob nom</string>
+    <string name="parol">Parol</string>
+    <string name="parolni_tasdiqlang">Parolni tasdiqlang</string>
+    <string name="ish_vaqti">Ish vaqti</string>
+    <string name="dan">dan</string>
+    <string name="kimlar_uchun">Kimlar uchun</string>
+    <string name="erkaklar">Erkaklar</string>
+    <string name="ayollar">Ayollar</string>
+    <string name="keyingisi">Keyingisi</string>
+    <string name="gacha">gacha</string>
+    <string name="ochilish_vaqti">Ochilish vaqti</string>
+    <string name="sartaroshxona_yaratish">Sartaroshxona yaratish</string>
+    <string name="bosh_joy_ishlatilmasin">Bo‘sh joy ishlatilmasin</string>
+    <string name="parol_mos_emas">Tasdiqlash paroliga mos kelmadi</string>
+    <string name="tasdiqlash_parolini_kiriting">Tasdiqlash parolini kiriting</string>
+    <string name="sartarosh_ismi">Sartarosh ismi</string>
+    <string name="telefon_raqami">Telefon raqami</string>
+    <string name="ishchi_qo_shish">Ishchi qo‘shish</string>
+    <string name="sartaroshlar">Sartaroshlar</string>
+    <string name="soch_turmak_nomi">Soch turmak nomi</string>
+    <string name="narxi">Narxi (so‘m)</string>
+    <string name="yangi_soch_turmak">Yangi soch turmak</string>
 </resources>

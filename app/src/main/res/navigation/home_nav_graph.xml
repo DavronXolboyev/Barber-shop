@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/barberShopsListFragment">
+
+    <fragment
+        android:id="@+id/barberShopsListFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.barbershops_list.BarbershopsListFragment"
+        android:label="fragment_barber_shops_list"
+        tools:layout="@layout/fragment_barbershops_list" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_createBarberShop"
+            app:destination="@id/createBarberShop" />
+    </fragment>
+    <fragment
+        android:id="@+id/barberFavShopsListFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.fav_barbershops_list.FavBarbershopsListFragment"
+        android:label="fragment_barber_fav_shops_list"
+        tools:layout="@layout/fragment_fav_barbershops_list" />
+    <fragment
+        android:id="@+id/createBarberShop"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.create.CreateBarberShopFragment"
+        android:label="fragment_create_barber_shop"
+        tools:layout="@layout/fragment_create_barber_shop" >
+        <action
+            android:id="@+id/action_createBarberShop_to_workersFragment"
+            app:destination="@id/workersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workersFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.createWorker.WorkersFragment"
+        android:label="WorkersFragment"
+        tools:layout="@layout/fragment_workers" >
+        <action
+            android:id="@+id/action_workersFragment_to_createPriceFragment"
+            app:destination="@id/createPriceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPriceFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.createPrice.CreatePriceFragment"
+        android:label="fragment_create_price"
+        tools:layout="@layout/fragment_create_price" >
+        <action
+            android:id="@+id/action_createPriceFragment_to_addPhotoFragment"
+            app:destination="@id/addPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPhotoFragment"
+        android:name="com.doxmobile.barbershop.presentation.fragment.home.profile.open_a_barbershop.addPhoto.AddPhotoFragment"
+        android:label="fragment_add_photo"
+        tools:layout="@layout/fragment_add_photo" />
+</navigation>
